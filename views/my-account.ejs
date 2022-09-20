@@ -1,0 +1,15 @@
+<%- include('partials/header'); -%>
+
+    <h1>My Account</h1>
+
+    <form action="/my-account" method="post" enctype="multipart/form-data">
+        <input type="text" name="reg_name" name="reg_name" value="<%= name %>">
+        <input type="email" name="username" name="username" value="<%= user.username %>" disabled>
+        <input type="number" name="phoneNumber" value="<%= phone %>" placeholder="Enter Phone Number">
+        <input type="text" name="userAddress" value="<%= address %>" placeholder="Enter Address">
+        <input type="file" name="avatarImg" />
+        <input type="submit" value="Register">
+    </form>
+    <img src="/uploads/<%= image %>" alt="" width="150">
+
+    <%- include('partials/footer'); -%>
